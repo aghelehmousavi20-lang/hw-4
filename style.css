@@ -1,8 +1,8 @@
 :root {
-    --deep-blue: #034b44;
-    --turquoise: #1eb7ab;
+    --deep-blue: #73bef8;
+    --turquoise: #1ff23f;
     --sky: #9AD0EC;
-    --bg: #eef4f7;
+    --bg: #f2f3f4;
 }
 * {
     margin: 0;
@@ -14,6 +14,7 @@ body{
     background: var(--bg);
     color: #111;
     line-height: 1.8;
+  
 }
 .navbar {
     position: sticky;
@@ -21,7 +22,7 @@ body{
     z-index: 10;
     background: rgba(5, 72, 139, 0.95);
     color: white;
-    padding: 15px 10%;
+    padding: 25px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,18 +55,32 @@ body{
     background: linear-gradient(135deg, var(--deep-blue));
     color: white;
     animation: fadeDown 1.5s ease;
+    text-align: right;
 }
 .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
+    color: #f0f8f1;
 }
 section {
-    padding: 90px 10%;
+    padding: 100px 10%;
 }
 h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     margin-bottom: 50px;
+    text-align: right;
+}
+h3{
+  text-align: right;
+  color:rgb(128, 160, 139);
+  font-size: 30px;
+  font-weight: bolder;
+}
+h3>p {
+  text-align: right;
+  color: rgb(51, 144, 95);
+  font-size: 25px;
 }
 .city-grid {
     display: grid;
@@ -100,7 +115,7 @@ h2 {
     flex-direction: column;
     justify-content: flex-end; 
 }
-.herat {
+.kabol {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 60px;
@@ -108,13 +123,7 @@ h2 {
     border-radius: 40px;
     animation: fadeUp 1.5s ease;
 }
-.herat h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.6rem;
-    color: #3FA9F5;
-    margin: 20px 0;
-}
-.herat-img {
+.kabol-img {
     position: relative;
     width: 100%;
     height: 420px;
@@ -122,7 +131,7 @@ h2 {
     overflow: hidden;
     background: #0A2540;
   }
-  .herat-img img {
+  .kabol-img img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -134,10 +143,10 @@ h2 {
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
   }
-  .herat-img img:first-child {
+  .kabol-img img:first-child {
     animation-name: heratFadeOne;
   }
-  .herat-img img:last-child {
+  .kabol-img img:last-child {
     animation-name: heratFadeTwo;
   }
   @keyframes heratFadeOne {
@@ -153,7 +162,7 @@ h2 {
     55%  { opacity: 1; transform: scale(1); }
     100% { opacity: 1; }
   }
-  .herat-img::after {
+  .kabol-img::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -164,7 +173,7 @@ h2 {
     );
     pointer-events: none;
   }
-  .herat-img:hover img {
+  .kabol-img:hover img {
     animation-play-state: paused;
   }
 .submit form {
@@ -172,20 +181,20 @@ max-width: 550px;
 display: flex;
 flex-direction: column;
 gap: 20px;
-justify-content: center;
-align-items: center;
+justify-content: right;
+align-items: right;
 }
 input, textarea {
     padding: 16px;
     border-radius: 12px;
-    border: 1.5px solid #ccc;
+    border: 2px solid #3c3b3b;
 }
 button {
     padding: 15px;
     border-radius: 30px;
-    border: none;
+    border: 1px;
     background: var(--deep-blue);
-    color: white;
+    color: rgb(249, 2, 2);
     cursor: pointer;
     transition: 0.4s;
 }
@@ -195,9 +204,8 @@ button:hover {
 footer {
     text-align: center;
     padding: 40px;
-    color: #555;
+    color: #2504fb;
 }
-
 
 @keyframes fadeUp {
     from { opacity: 0; transform: translateY(40px); }
