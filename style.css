@@ -1,8 +1,7 @@
 :root {
-    --deep-blue: #73bef8;
-    --turquoise: #1ff23f;
-    --sky: #9AD0EC;
-    --bg: #f2f3f4;
+    --light-blue: #0a3557;
+    --link: #1ff23f;
+    --backg: #f2f3f4;
 }
 * {
     margin: 0;
@@ -11,7 +10,7 @@
 }
 body{
     font-family: 'Playfair', serif;
-    background: var(--bg);
+    background: var(--backg);
     color: #111;
     line-height: 1.8;
   
@@ -44,26 +43,27 @@ body{
     bottom: -5px;
     width: 0;
     height: 2px;
-    background: var(--turquoise);
+    background: var(--link);
     transition: 0.5s ease;
 }
 .navbar a:hover::after {
     width: 100%;
 }
-.hero {
+.first {
     padding: 100px 10%;
-    background: linear-gradient(135deg, var(--deep-blue));
+    background: linear-gradient(120deg, var(--light-blue));
     color: white;
     animation: fadeDown 1.5s ease;
     text-align: right;
 }
-.hero h1 {
+.first h1 {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     color: #f0f8f1;
 }
 section {
     padding: 100px 10%;
+    background: linear-gradient(120deg, #97e2d9, #303284);
 }
 h2 {
     font-family: 'Playfair Display', serif;
@@ -73,13 +73,13 @@ h2 {
 }
 h3{
   text-align: right;
-  color:rgb(128, 160, 139);
+  color:rgb(229, 233, 230);
   font-size: 30px;
   font-weight: bolder;
 }
 h3>p {
   text-align: right;
-  color: rgb(51, 144, 95);
+  color: rgb(196, 199, 197);
   font-size: 25px;
 }
 .city-grid {
@@ -87,27 +87,27 @@ h3>p {
     grid-template-columns: repeat(2, 1fr);
     gap: 35px;
 }
-.city-card {
+.city-picture {
     position: relative;
     height: 360px;
     border-radius: 22px;
     overflow: hidden;
     animation: fadeUp 1.2s ease;
 }
-.city-card img {
+.city-picture img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     box-sizing: width 200p;
 }
-.city-card:hover .overlay {
+.city-picture:hover .overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to top,
-        rgba(10,37,64,0.85),
-        rgba(10,37,64,0.2)
+        rgba(17, 98, 74, 0.85),
+        rgba(10, 60, 64, 0.2)
     );
     color: white;
     padding: 30px;
@@ -119,8 +119,7 @@ h3>p {
     display: grid;
     grid-template-columns: 1.2fr 1fr;
     gap: 60px;
-    background: linear-gradient(135deg, #e6f7f5, #ffffff);
-    border-radius: 40px;
+    background: linear-gradient(120deg, #556cd0, #195999);
     animation: fadeUp 1.5s ease;
 }
 .kabol-img {
@@ -144,19 +143,19 @@ h3>p {
     animation-iteration-count: infinite;
   }
   .kabol-img img:first-child {
-    animation-name: heratFadeOne;
+    animation-name: kabolFadeOne;
   }
   .kabol-img img:last-child {
-    animation-name: heratFadeTwo;
+    animation-name: kabolFadeTwo;
   }
-  @keyframes heratFadeOne {
+  @keyframes kabolFadeOne {
     0%   { opacity: 1; transform: scale(1); }
     40%  { opacity: 1; transform: scale(1.02); }
     55%  { opacity: 0; transform: scale(1.06); }
     100% { opacity: 0; }
   }
   
-  @keyframes heratFadeTwo {
+  @keyframes kabolFadeTwo {
     0%   { opacity: 0; transform: scale(1.06); }
     40%  { opacity: 0; }
     55%  { opacity: 1; transform: scale(1); }
@@ -193,18 +192,19 @@ button {
     padding: 15px;
     border-radius: 30px;
     border: 1px;
-    background: var(--deep-blue);
+    background: var(--light-blue);
     color: rgb(249, 2, 2);
     cursor: pointer;
     transition: 0.4s;
 }
 button:hover {
-    background: var(--turquoise);
+    background: var(--link);
 }
 footer {
     text-align: center;
     padding: 40px;
     color: #2504fb;
+    background-color: #28446bad;
 }
 
 @keyframes fadeUp {
@@ -217,9 +217,41 @@ footer {
     to { opacity: 1; transform: translateY(0); }
   }
   
-  /* RESPONSIVE */
   @media (max-width: 900px) {
-    .herat {
+    .kabol {
       grid-template-columns: 1fr;
     }
   }
+  .food-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+.food-picture {
+    position: relative;
+    height: 360px;
+    border-radius: 22px;
+    overflow: hidden;
+    animation: fadeUp 1.2s ease;
+}
+.food-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    box-sizing: width 200p;
+}
+.food-picture:hover .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(114, 22, 22, 0.85),
+        rgba(64, 10, 43, 0.2)
+    );
+    color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+}
